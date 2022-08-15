@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
 
         home: Scaffold(
 
-            backgroundColor: Colors.greenAccent,
+            backgroundColor: Colors.green,
 
           appBar: AppBar(
-            title: Text("Application Title Bar ",
+            title: Text("Flutter Dev ",
                 style: TextStyle(color: Colors.amberAccent)),
             leading: Icon(Icons.account_box, size: 28, color: Colors.pink,),
             backgroundColor: Colors.black,
@@ -27,31 +27,101 @@ class MyApp extends StatelessWidget {
           ),
 
 
-          body: Container(
-            height: 200,
-            width: 200,
+          body:  Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            // mainAxisAlignment: MainAxisAlignment.start,
+            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // crossAxisAlignment: CrossAxisAlignment.baseline
 
-            decoration: BoxDecoration(
-              border: Border.all(width: 16, color: Colors.blue),
-              color: Colors.deepOrange,
-              boxShadow: [
-                BoxShadow(color: Colors.pink, spreadRadius: 16,
-                    offset: Offset(12.2, 9.0)),
+            mainAxisSize: MainAxisSize.max,
+            children: [
+
+              Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+
+                  color: Colors.amber,// container border
+
+                  boxShadow: [
+                    BoxShadow(color: Colors.pink, spreadRadius: 8,
+                        // offset: Offset(12.2, 9.0)
+                    ),
+                  ],
+                ),
+                margin: EdgeInsets.all(5),
+                padding: EdgeInsets.all(5),
+                alignment: Alignment.center,
+                child: Text("L", style: TextStyle(color: Colors.pink, fontSize: 20), ) ,
+              ),
+
+              Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Colors.blue,// container border
+                ),
+                margin: EdgeInsets.all(5),
+                padding: EdgeInsets.all(5),
+                alignment: Alignment.center,
+                child: Text("E", style: TextStyle(color: Colors.white, fontSize: 20),),
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Colors.red,// container border
+                ),
+                width: 60,
+                height: 60,
+                // color: Colors.red,
+                margin: EdgeInsets.all(5),
+                padding: EdgeInsets.all(5),
+                alignment: Alignment.center,
+                child: Text("A", style: TextStyle(color: Colors.white, fontSize: 20),),
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Colors.blue,// container border
+                ),
+                width: 60,
+                height: 60,
+                // color: Colors.red,
+                margin: EdgeInsets.all(5),
+                padding: EdgeInsets.all(5),
+                alignment: Alignment.center,
+                child: Text("R", style: TextStyle(color: Colors.white, fontSize: 20),),
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Colors.pink,// container border
+                ),
+                width: 60,
+                height: 60,
+                // color: Colors.red,
+                margin: EdgeInsets.all(5),
+                padding: EdgeInsets.all(5),
+                alignment: Alignment.center,
+                child: Text("N", style: TextStyle(color: Colors.white, fontSize: 20),),
+              )
+
             ],
 
-              borderRadius: BorderRadius.circular(200), // container border
-          
-            ),
-            transform: Matrix4.rotationZ(0.1),
-            constraints: BoxConstraints.expand(height: 250, width: 400),
-            
-            alignment: Alignment.center,
-            margin: EdgeInsets.all(100),
-            // padding: EdgeInsetsDirectional.all(10),
-            // color: Colors.deepOrange,
 
-            child: Text("Apple", style: TextStyle(fontSize: 50, color: Colors.black)),
-          )
+
+
+          ),
+
+
+
+
         )
     );
   }
