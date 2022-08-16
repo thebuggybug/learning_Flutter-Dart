@@ -10,177 +10,157 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(brightness: Brightness.dark, primaryColor: Colors.red),
-        title: "My application",
-        home: Scaffold(
-            backgroundColor: Colors.indigoAccent,
-            appBar: AppBar(
-              backgroundColor: Colors.red,
-              centerTitle: true,
-              title: Text("Demo App",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  )),
-              leading: Icon(Icons.supervised_user_circle,
-                  size: 40, color: Colors.greenAccent),
-            ),
-            body: Column(
-              children: [
-                Center(
-                  child: Container(
-                    height: 120,
-                    width: 120,
-                    margin: EdgeInsets.only(top: 20),
-                    // padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        borderRadius: BorderRadius.circular(75),
-                        border: Border.all(color: Colors.black, width: 4)),
-                    child: Center(
-                      child: (Text(
-                        "R",
-                        style: TextStyle(
-                            fontSize: 75,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
-                      )),
-                    ),
-                  ),
-                ),
+      debugShowCheckedModeBanner: false,
+      title: " My Application",
+      theme: ThemeData.dark(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Android Application"),
+        ),
 
-                //username
-                Container(
-                  margin: EdgeInsets.all(10),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      // border: Border.all(),
-                      borderRadius: BorderRadius.circular(100),
-                      color: Colors.orangeAccent),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: TextField(
-                      enableSuggestions: true,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Your name here",
-                          icon: Icon(Icons.person)),
-                    ),
-                  ),
-                ),
+        // body: Stack(
+        //   alignment: Alignment.center,
+        //   textDirection: TextDirection.rtl,
+        //   fit: StackFit.passthrough,
+        //
+        //
+        //   children: [
+        //     Center(
+        //       child: Container(
+        //         // alignment: ,
+        //         height: 500,
+        //         width: 350,
+        //         color: Colors.green,
+        //       ),
+        //     ),
+        //     Container(
+        //       height: 450,
+        //       width: 300,
+        //       color: Colors.white,
+        //     ),
+        //     Container(
+        //       height: 400,
+        //       width: 250,
+        //       color: Colors.redAccent,
+        //     ),
+        //
+        //     Container(
+        //       decoration: BoxDecoration(
+        //           color: Colors.orangeAccent,
+        //           borderRadius: BorderRadius.circular(50)
+        //       ),
+        //       height: 100,
+        //       width: 100,
+        //     ),
+        //   ],
+        // ),
 
-                //Password
-                Container(
-                  margin: EdgeInsets.all(10),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      // border: Border.all(),
-                      borderRadius: BorderRadius.circular(100),
-                      color: Colors.red),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: TextField(
-                      obscureText: true,
-                      enableSuggestions: false,
-                      autocorrect: false,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Password here",
-                          icon: Icon(Icons.password)),
-                    ),
-                  ),
-                ),
+        body: Center(
+          child: Stack(
+            fit: StackFit.passthrough,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(400),
+                  color: Colors.orangeAccent,
 
-                //Social Links
-                Container(
-                  margin: EdgeInsets.all(10),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      // border: Border.all(),
-                      borderRadius: BorderRadius.circular(100),
-                      color: Colors.deepPurpleAccent),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: TextField(
-                      enableSuggestions: false,
-                      autocorrect: false,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Social Links",
-                          icon: Icon(Icons.link)),
-                    ),
-                  ),
                 ),
-
-                // text button
-                TextButton(
+                height: 300,
+                width: 300,
+                child: Center(
                   child: Text(
-                    "Text Btn",
-                    style: TextStyle(color: Colors.red),
+                    "HEY",
+                    style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
                   ),
-                  style: ButtonStyle(
-                    foregroundColor:
-                        MaterialStateProperty.all<Color>(Colors.white),
-                  ),
-                  onPressed: () {},
                 ),
-
-                ElevatedButton(
-                    child: Text("Elevated Btn"),
-                    style: ButtonStyle(
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
+              ),
+              Positioned(
+                top: 10,
+                // left: 0,
+                right: 10,
+                child: Container(
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.blue,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Blue",
+                      style: TextStyle(fontSize: 20),
                     ),
-                    // style: ButtonStyle(backgroundColor: ),
-                    onPressed: () {}),
+                  ),
 
-                OutlinedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Outline Btn",
-                    style: TextStyle(color: Colors.white),
+                ),
+              ),
+              Positioned(
+                top: 10,
+                // left: 0,
+                left: 10,
+                child: Container(
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.red,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Red",
+                      style: TextStyle(fontSize: 20),
+                    ),
                   ),
                 ),
+              ),
 
-                FloatingActionButton(
-                  onPressed: () {},
-                  // child: Text("Float"),
-                  child: Icon(Icons.save),
-                  foregroundColor: Colors.white,
-                  backgroundColor: Colors.red,
+              Positioned(
+                bottom: 10,
+                // left: 0,
+                right: 10,
+                child: Container(
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.green,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Green",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                 ),
+              ),
 
-                FloatingActionButton.extended(
-                  onPressed: () {},
-                  label: Text("Float Extd"),
-                  icon: Icon(Icons.save),
-                  foregroundColor: Colors.black,
-                  backgroundColor: Colors.white,
-                )
+              Positioned(
+                bottom: 10,
+                // left: 0,
+                left: 10,
+                child: Container(
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.deepPurple,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Purple",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
 
-                //Button
-                // Container(
-                //   height: 45,
-                //   width: 200,
-                //   margin: EdgeInsets.all(10),
-                //   alignment: Alignment.center,
-                //   decoration: BoxDecoration(
-                //       // border: Border.all(),
-                //       borderRadius: BorderRadius.circular(100),
-                //       color: Colors.deepPurple),
-                //   child: Center(
-                //     child: Text(
-                //       "Update",
-                //       style:
-                //           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                //     ),
-                //   ),
-                // ),
-
-                // >> BUTTON ) Flat Button
-              ],
-            )));
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
